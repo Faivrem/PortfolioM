@@ -5194,4 +5194,20 @@ footer .row-content.buffer {
         -webkit-text-size-adjust: none;
     }
 }
+.lasuite {
+    color:brown;
+    font-variant:small-caps;
+}
+.demasquer {
+    display:none;
+}
+#post1:hover .demasquer {
+    display:inline;
+}
+#post1:hover .lasuite {
+    display:none;
+}
+.demasquer:hover {
+    display: inline;
+}
       
