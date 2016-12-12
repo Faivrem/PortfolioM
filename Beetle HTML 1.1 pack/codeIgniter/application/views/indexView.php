@@ -7,18 +7,21 @@
 		<meta name="description" content="The Page Description">
 		<style type="text/css">@-ms-viewport{width: device-width;}</style>
 		<title>Etudiant en D.U.T Informatique| Maxime Faivre  </title>
-		<link rel="stylesheet" href="css/layers.min.css" media="screen">
-		<link rel="stylesheet" href="css/font-awesome.min.css" media="screen"> 
-		<link rel="stylesheet" href="style.css" media="screen">
+		<link rel="stylesheet" href="<?php echo css_url('layers.min');?>"  media="screen">
+		<link rel="stylesheet" href="<?php echo css_url('style');?>" media="screen">
+		<link rel="stylesheet" href="<?php echo css_url('font-awesome.min');?>" media="screen">
+		
+	
+   
 		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 		<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 		<![endif]-->
 		<link rel="icon" href="img/briefcase.png">
-		<link rel="apple-touch-icon" href="img/briefcase.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="img/briefcase.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="img/briefcase.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="img/briefcase.png">			
+		<link rel="apple-touch-icon" href="<?php echo img_url('briefcase.png');?>">
+		<link rel="apple-touch-icon" sizes="76x76"  href="<?php echo img_url('briefcase.png');?>">
+		<link rel="apple-touch-icon" sizes="120x120" href="<?php echo img_url('briefcase.png');?>">
+		<link rel="apple-touch-icon" sizes="152x152" href="<?php echo img_url('briefcase.png');?>">	
 	</head>
 
 	<body class="page">
@@ -26,16 +29,16 @@
 			<div class="row">
 				<div class="nav-inner row-content buffer-left buffer-right even clear-after">
 					<div id="brand">
-						<h1 class="reset"><!--<img src="img/logo.png" alt="logo">--><a href="index.html">Portfolio</a></h1>
+						<h1 class="reset"><!--<img src="img/logo.png" alt="logo">--><a href="<?php echo base_url()?>">Portfolio</a></h1>
 					</div><!-- brand -->
 					<a id="menu-toggle" href="#"><i class="fa fa-bars fa-lg"></i></a>
 					<nav>
 						<ul class="reset" role="navigation">
 							<li class="menu-item">
-								<a href="index.html">Accueil</a>
+								<a href="<?php echo base_url()?>">Accueil</a>
 							</li>
 							<li class="menu-item">
-								<a href="list_article.html">Blog</a>
+								<a href="<?php echo base_url()?>blog">Blog</a>
 								<!--<ul class="sub-menu">
 									<li><a href="blog-4-columns-masonry.html">Four Columns Grid</a></li>
 									<li><a href="blog-list-sidebar.html">List Style with Sidebar</a></li>
@@ -43,14 +46,14 @@
 									<li><a href="single-blog-post-sidebar.html">Single Post with Sidebar</a></li>
 								</ul>-->
 							</li>
-							<li class="menu-item"><a href="doc/CV_faivre_m.pdf" target="_blank">CV</a></li>
+							<li class="menu-item"><a href="<?php echo doc_url('CV_faivre_m.pdf');?>" target="_blank">CV</a></li>
 							<li class="menu-item"><a href="https://monexperiencequebecblog.wordpress.com/" target="_blank">Mon expérience Québec</a></li>
 							<li class="menu-item">
-								<a href="aller_au_Quebec.html">Expérience Québec</a>
+								<a href="<?php echo base_url()?>monexperiencequebec/partir_au_quebec">Expérience Québec</a>
 								<ul class="sub-menu">
-									<li><a href="aller_au_Quebec.html">Partir au Québec</a></li>
+									<li><a href="<?php echo base_url()?>monexperiencequebec/partir_au_quebec">Partir au Québec</a></li>
 									<li><a href="Cours_uqo.html">Les cours à l'UQO</a></li>
-									<li><a href="list_quebec.html">Blog Québec</a></li>
+									<li><a href="<?php echo base_url()?>monexperiencequebec/blog">Blog Québec</a></li>
 									<li><a href="no-results.html">Search Page - No Results</a></li>
 									<li><a href="page-not-found.html">404 - Page Not Found</a></li>
 									<li>
@@ -63,7 +66,7 @@
 									</li>
 								</ul>								
 							</li>
-							<li class="menu-item"><a href="contact.html">Contact</a></li>
+							<li class="menu-item"><a href="<?php echo base_url()?>contact">Contact</a></li>
 						</ul>
 					</nav>
 				</div><!-- row-content -->	
@@ -81,7 +84,7 @@
 								<a class="button white transparent" href="#main">Qui suis-je?</a>
 							</div><!-- caption -->
 							<div class="intro-mockup intro-left column six">
-								<img src="img/boston.png" alt="">
+								<?php echo img('boston.png');?>
 							</div><!-- intro-mockup -->							
 						</div><!-- intro-mockup-wrapper -->
 					</div>					
@@ -90,10 +93,10 @@
 							<div class="caption-mockup">
 								<h2>CV</h2>
 								<p>Tous mes atouts regroupés dans un seul document!</p>
-								<a class="button white transparent" href="doc/CV_faivre_m.pdf" target="_blank">Télécharger</a>
+								<a class="button white transparent" href="<?php echo doc_url('CV_faivre_m.pdf');?>" target="_blank">Télécharger</a>
 							</div><!-- caption -->											
 							<div class="intro-mockup">
-								<img src="img/cv.png" alt="">
+								<?php echo img('cv.png');?>
 							</div><!-- intro-mockup -->	
 						</div><!-- intro-mockup-wrapper -->										
 					</div>
@@ -105,7 +108,7 @@
 								<a class="button white transparent" href="list_article.html">J'ai soif de lecture!</a>
 							</div><!-- caption -->												
 							<div class="intro-mockup intro-right column six last">
-								<img src="img/Blog.png" alt="">
+								<?php echo img('Blog.png');?>
 							</div><!-- intro-mockup -->	
 						</div><!-- intro-mockup-wrapper -->
 					</div>
@@ -168,7 +171,7 @@
 								<time datetime="2017">2017</time>
 								<div class="experience">
 									<span class="circle"></span>
-									<div class="experience-img"><img src="img/uqo.png" alt=""></div>
+									<div class="experience-img"><div><?php echo img('uqo.png');?></div></div>
 									<div class="experience-info clear-after">
 										<h5>UQO</h5>
 										<div class="role">Baccalauréat en Informatique</div>
@@ -181,7 +184,7 @@
 								<time datetime="2016">2016</time>
 								<div class="experience">
 									<span class="circle"></span>
-									<div class="experience-img"><img src="img/upec.png" alt=""></div>
+									<div class="experience-img"><div><?php echo img('upec.png');?></div></div>
 									<div class="experience-info clear-after">
 										<h5>UPEC</h5>
 										<div class="role">1ère année de D.U.T Informatique</div>
@@ -194,7 +197,7 @@
 								<time datetime="2015">2015</time>
 								<div class="experience">
 									<span class="circle"></span>
-									<div class="experience-img"><img src="img/truffaut.png" alt=""></div>
+									<div class="experience-img"><div><?php echo img('truffaut.png');?></div></div>
 									<div class="experience-info clear-after">
 										<h5>Lycée François Truffaut</h5>
 										<div class="role">Baccalauréat Scientifique (option I.S.N)</div>
@@ -287,9 +290,9 @@
 						<div class="side-mockup right-mockup animation">
 							<div class="slider desktop-slider" data-autoplay="3000">
 								<figure>
-									<div><img src="img/blog1.png" alt=""></div>
-									<div><img src="img/blog2.png" alt=""></div>
-									<div><img src="img/blog3.png" alt=""></div>
+									<div><?php echo img('blog1.png');?></div>
+									<div><?php echo img('blog2.png');?></div>
+									<div><?php echo img('blog3.png');?></div>
 								</figure>
 							</div>
 						</div>
@@ -338,8 +341,8 @@
 		</footer>
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>		
-		<script src="js/plugins.js"></script>
-		<script src="js/beetle.js"></script>
+		<script src="<?php echo js_url('plugins');?>"></script>
+		<script src="<?php echo js_url('beetle');?>"></script>
 
 	</body>
 
