@@ -22,14 +22,25 @@ class monexperiencequebec extends CI_Controller {
 	{
 		$this->Blog();
 	}
-	public function Blog(){
+	public function Blog($page=''){
 	$this->load->helper('url');
 	$this->load->helper('assets');
+	if ($page==''){
 	$this->load->view('blogQView');
 	}
+	else {
+	$this->load->view('articleQ/'.$page);
+	}
+	}
+	
 	public function partir_au_quebec(){
 	$this->load->helper('url');
 	$this->load->helper('assets');
 	$this->load->view('aller');
+	}
+	public function les_cours_a_l_UQO(){
+	$this->load->helper('url');
+	$this->load->helper('assets');
+	$this->load->view('cours');
 	}
 }

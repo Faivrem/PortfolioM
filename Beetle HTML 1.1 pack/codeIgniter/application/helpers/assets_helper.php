@@ -39,5 +39,27 @@ if ( ! function_exists('img'))
 	}
 }
 
+if ( ! function_exists('img_blog'))
+{
+	function img_blog($nom, $alt = '')
+	{
+		return '<img src="' . base_url() . 'assets/img/Qblog/' . $nom. '" alt="' . $alt . '" />';
+	}
+}
+
+if ( ! function_exists('lien_blog'))
+{
+	function lien_blog($nom)
+	{
+		return '<a href="' . base_url() . 'monexperiencequebec/blog/' . $nom. '" />';
+	}
+}
+if ( ! function_exists('lien_article'))
+{
+	function lien_article($nom)
+	{
+		return '<a href="' . base_url() . 'blog/article/' . $nom. '" />';
+	}
+}
 
 ?>

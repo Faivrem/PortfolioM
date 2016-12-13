@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta name="description" content="The Page Description">
 		<style type="text/css">@-ms-viewport{width: device-width;}</style>
-		<title>Partir au Québec| Maxime Faivre  </title>
+		<title>L'arrivé | Maxime Faivre  </title>
 		<link rel="stylesheet" href="<?php echo css_url('layers.min');?>"  media="screen">
 		<link rel="stylesheet" href="<?php echo css_url('style');?>" media="screen">
 		<link rel="stylesheet" href="<?php echo css_url('font-awesome.min');?>" media="screen">
@@ -25,17 +25,16 @@
 	</head>
 
 	<body class="single single-post">
-
 		<?php include('menu.php');?>
 
 		<main role="main">
 			<div id="intro-wrap">
 				<div id="intro" class="preload darken" data-autoplay="5000" data-navigation="true" data-pagination="true" data-transition="fade">
-					<div class="intro-item" style="background-image: url(<?php echo img_url('quebec.png');?>">
+										<div class="intro-item" style="background-image: url(<?php echo img_url('Qblog/arrive/1.png');?>);">
 						<div class="photocaption">
-							<h4>Québec vue de nuit</h4>
+							<h4><i font-style="italic">"Rien n’est permanent, sauf le changement."</i></h4>
 						</div><!-- photocaption -->
-					</div>														
+					</div>										
 				</div><!-- intro -->				
 			</div><!-- intro-wrap -->
 
@@ -43,7 +42,7 @@
 				<div class="row-content buffer-left buffer-right buffer-bottom">
 					<div id="post-nav">
 						<ul class="clear-after reset plain">
-							<li id="prev-items" class="post-nav"><a href="#"><i class="fa fa-chevron-left"></i><span class="label">Prev</span></a></li> 
+							<li id="prev-items" class="post-nav"><a href="tbtp.html"><i class="fa fa-chevron-left"></i><span class="label">Prev</span></a></li> 
 							<li id="all-items" class="post-nav"><a href="#"><i class="icon icon-images"></i></a></li> 							 
 							<li id="next-items" class="post-nav"><a href="#"><span class="label">Next</span><i class="fa fa-chevron-right"></i></a></li>  
 						</ul>
@@ -51,77 +50,32 @@
 
 					<div class="post-area clear-after">
 						<article role="main">
-							<h5 class="meta-post"><a href="#">Voyages</a>, <a href="#">Québec</a> - <time datetime="2013-11-09">November 9, 2013</time></h5>
-							<div class="section-title"><h3 class="blue">Toi aussi l’Amérique, t’y a toujours rêvé d’y étudier? <br>Mais ton niveau d’anglais c’est pas ça?</h3></div>
+							<h5 class="meta-post"><a href="#">Voyage</a>, <a href="#">Québec</a> - <time datetime="2013-11-09">9 décembre 2016</time></h5>
+							<h1>L'arrivé</h1>
+							<p>Ça y est c’est le grand départ..</p>
 
-<div class="section-title"><h3 class="blue">Toi aussi on t’a toujours dis que le Québec c’est incroyable?
+<p><b>23 AOUT :</b> Aurevoir la France, aller pleure pas on se revoit bientôt! <br><br>
 
-Toi aussi t’adore le sirop d’érable et les pancakes?
-</h3></div>
-<b>La seule solution pour combler tes envies c’est de partir!</b> <br>
+Direction Aéroport de Paris-Charles-de-Gaulle puis Montréal. Notre vol était à 13h(heure française) et arrivé prévu à 15h(heure québécoise), avec 8 heures de trajet…Comment vous dire que la journée était plutôt longue.. (30h).</p>
 
-Comme dit le proverbe québécois :
+<p>Nous sommes partis avec AirCanada, pas de problème de voyage ,une petite sieste pour moi, un petit films pour mon père et pour Ludo.</p>
 
-<p><i>"L’abeille qui reste au nid n’amasse pas de miel."</i></p>
+<p>Arrivé à l’aéroport de Montréal, nous avons loué une voiture pour rejoindre Gatineau(Comme si on avait pas eu assez de trajet..). On a récupéré les clefs de l’appartement puis un gros dodo pour se reposer. <br>
+<?php echo img_blog('arrive/2.png');?>
 
-<u>Les étapes pour partir:</u><br>
-<ul>
-<li><p> <b>1. Prend la peine d’y réfléchir et pose toi la question si tu as assez de maturité et d’autonomie pour vivre sans tes proches.</p></b></li>
-
-<p>Commençons par le commencement. Premièrement partir à l’étranger pour étudier est une décision dont y faut prendre la peine d’y réfléchir.. Bah oui, loin de Papa, Maman, de tous tes amis, de ta culture et de tes petites habitudes. Pose-toi aussi la question financière, est-ce que tu pourras subvenir à tes besoins durant ta période d’études? Sache que la plupart du temps une aide à la mobilité est proposée pour les étudiants étrangers, mais cela suffit pas(informe toi auprès de ton université).</p>
-
-<li><p><b>2. Informe toi des accords interuniversitaires de ton école, et choisis ta destination.</p></b></li>
-
-<p>Ça y est, t’en a marre de rester dans ta zone de confort, t’as décidé de partir. C’est bien mais où? Il faut que tu te renseigne auprès de ton école. La plupart des universités françaises ont des accords avec des universités québécoises. Avec l’UPEC, j’avais le choix entre plusieurs destinations : Montréal, Ottawa, 3 Rivières, Sherbrooke, Chicoutimi. Pour ma part j’ai choisi Ottawa ou plutôt Gatineau(côté Québec) pour le côté bilingue de la région(on parle français à Gatineau mais on a juste à traverser la rivière pour se trouver à Ottawa où tout le monde parle anglais). Réfléchissez bien à votre choix de destination, informez-vous sur les villes et leur vie étudiante (leurs activités culturelles, loisirs, nombre d’étudiants, etc..). Par exemple, Chicoutimi est une toute petite ville mais totalement étudiante, à part le campus y a pas grand chose.. Après chacun son truc!</p>
-
-<li><p><b>3. Prépare une lettre de motivation béton et poste ta candidature</li></p></b>
-
-<p>Chaque université à sa démarche d’admission, cependant toutes vont te demander une lettre de motivation. Quelques petits conseils pour ta lettre de motivation:</p>
-<ul><p>
-<li>Montre ton intérêt pour l’université: évoque les raisons pour lesquelles tu as choisis cette école et pas une autre. Renseigne toi sur leurs valeurs, leurs points forts.
-</li>
-<li>Montre ton intérêt pour le Québec : Pourquoi tu as choisis cette destination et pas une autre? Qu’est-ce qui te plaît au Québec(mise à part les poutines et le sirop d’érable)?</li>
-<li>Évoque tes points forts et ta capacité d’adaptation : Tu va être confronté à une culture autre que celle de la France, fait leur part de ton excitation. Qu’est-ce que va t’apporter cette expérience pour ton avenir?</li></ul></p>
-<p>Ne sois pas trop stressé non plus.. Tu peux demander de l’aide pour ta lettre, et si tu as assez de maturité et que tes notes suivent, il y a pas de raison que tu ne puisses pas partir! Attention : N’attend pas le dernier moment pour commencer les démarches, le départ arrive plus vite que tu ne le crois..</p>
-
-<li><p><b>4. Les papiers d’immigrations</li></p></b>
-
-<p>Sûrement la partie la plus importante mais la plus ennuyeuse. Je vais expliquer  la manière dont j’ai procédé avec mon point de vue d’étudiant, en essayant de faire simple(même si c’est pas facile). Pour partir en étude au Québec il vous faut plusieurs choses:
-</p>
-<ul>
-<li>Le formulaire pour l’assurance maladie (le plus souvent SE 401-Q–106 )</li>
-<li>BCI</li>
-<li>Contrat d’étude</li>
-<li>Ta lettre d’acceptation</li>
-<li>Un CAQ (certificat d’acceptation au Québec)</li>
-<li>Un permis d’études</li>
-<li>(Optionnel, mais conseillé) Accueil Plus</li>
-</ul>
-<p>Après avoir posté ta candidature et avoir reçu ta lettre d’acceptation(avec un peu de chance), il faut que tu t’occupes de ton immigration sur le territoire québécois. Commence par demander le formulaire <i>SE 401-Q–106  REMPLI</i> à ton assurance étudiante (ou autre, tout dépend où tu es assuré) et fait le remplir par ton université en France.<b> Attention: </b>mentionne bien la durée de ton séjour d’études à ton assurance maladie. Si les dates ne sont pas bonnes, tu devras renvoyer le <i>formulaire SE 401-Q–106 </i>pour pouvoir être assuré durant la période complète. Une assurance est obligatoire, l’université ne t’acceptera pas si tu n’as une preuve d’assurance en France. Ce formulaire te permettra d’obtenir ta carte d’assurance de la RAMQ une fois arrivé au Québéc. </p>
-
-<p>Il te faut aussi ton BCI. L’ouverture d’un dossier se fait en ligne <a href="http://echanges-etudiants.bci-qc.ca/je-suis-inscrit-dans-un-etablissement-quebecois/" target="_blank" >ici.</a></p>
-
-<p>Sachant que tu vas suivre des cours dans un pays étranger, il te faut une équivalence en France. Le contrat d’étude à faire remplir par ton université en France puis par ton université d’accueil te permettra de convertir tes crédits acquis à l’étranger en crédit français(3 crédits québécois = 6 crédits français). Pour les échanges avec l’UPEC, tu trouveras ce document <a href="http://www.u-pec.fr/etudiant/partir-a-l-etranger/programmes-d-echanges/bci-contrat-d-etudes-395294.kjsp" target="_blank" >ici.</a></p>
-
-<p>Ta lettre d’acceptation devrait être envoyé par courrier, avec des documents relatifs à ton inscription, quelques semaines après ta candidature. Elle est indispensable pour pouvoir faire ta demande de CAQ/Permis d’études.</p>
-
-<p>Passons maintenant à ta demande de CAQ. Rendez-vous <a href="http://www.immigration-quebec.gouv.qc.ca/fr/services/caq-electronique/index.html" target="_blank" >ici</a> pour l’ouverture de dossier. Il te faudra aussi leur transmettre des documents papiers. Et pour les envoyer de l’autre côté de l’atlantique c’est jamais très rapide, donc ne tarde pas à monter ton dossier.</p>
-
-<p>Après avoir reçu ton CAQ, tu peux enfin faire ta demande de permis d’étude. Celle fois-ci sur le <a href="http://www.cic.gc.ca/francais/information/demandes/etudiant.asp" target="_blank">site du gouvernement canadien</a>( ça rigole pas). Pas besoin de monter un dossier papier, tout se fait en ligne! Tu obtiendra ton permis d’étude une fois arrivé à la frontière québécoise. D’ailleurs un petit conseil pour pas attendre 4 heures à la frontière, si tu atterris à Montréal ,inscris-toi à Accueil Plus. Ça te prend quelques minutes pour t’inscrire et ça te fais économiser du temps à la frontière. C’est juste <a href="http://www.accueilplus.ca/" target="_blank">ici</a>.
-</ul>
-</p>
-<p>Ouf… t’as tous les papiers pour partir. Bon, maintenant il te faut peut-être un logement ,non? Avec -30°C en hiver c’est toujours mieux d’avoir un toit. Tous les campus proposent des logements étudiants, mais ça c’est comme les papiers… faut s’y prendre à l’avance car les places sont limitées. Cherche sur le site de ton université d’accueil si tu veux faire une demande de logement. Des groupes sur Facebook existent aussi si tu pars seul et que tu veux faire une collocation avec des québécois. Autre solutions, des logements privés(comme sur AirBNB) qu’on trouvent sur le net en fouinant un peu. Avant de te précipiter, fais bien toutes les recherches qu’il faut et pense à ta vie ici. Par exemple, regarde si le logement est loin de l’université, si c’est plus intéressant de prendre un abonnement de bus ou pas, si le logement est loin des commerces (pas pratique de porter les courses avec 40cm de neige), si votre logement dispose d’une machine à laver/sécheuse, etc..</p>
-
-<p>Bon pour ce qui est du départ, c’est à vous de choisir votre date d’arrivée en fonction de si vous voulez visiter le Canada ou pas. Personnellement, on est arrivé 2 semaines avant les débuts de cours et on a pu visiter pas mal de chose.. Voir Blog.
-</p>
-
-En attendant, voici une petite checklist pour voir si vous avez rien oublié :<br><br>
+<p><b>24 AOUT :</b> Au petit matin on s’est installé dans nos chambres respectives et avons fait le plein de course pour contribuer à notre survie.</p>
 
 
-<a href="http://www.blog-canada.com" target="_blank">Source de la checklist</a> <br> <br>
+<p>Petit promenade dans le parc de la Gatineau et un tour à l’agence de Tourisme de la ville pour  découvrir les activités.<br>
+<?php echo img_blog('arrive/3.png');?></p>
 
-<?php echo img('checklist.png');?>
-<div class="centertxt"><a class="button transparent red" href="contact.html" target="_blank">Pour toute question n'hésitez pas à me contacter</a></div><br>
+<p>Durant l’été, le parlement du Canada, situé à Ottawa, est éclairé durant un spectacle lumineux retraçant l’histoire du Québec. Vraiment captivant, je vous laisse admiré.</p>
+<br>
+<?php echo img_blog('arrive/4.png');?></img>
+<br>
+<?php echo img_blog('arrive/5.png');?></img></div>
+
+<p>Retour à l’appart 😴..Demain départ Montréal.</p>
 						</article>
 
 					</div><!-- post-area -->
