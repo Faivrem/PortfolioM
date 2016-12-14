@@ -35,7 +35,7 @@ class Commentaire extends CI_Model {
 		return (int) $this->db->count_all_results('Commentaireblog');
 	}
 	
-	public function liste_Q(){
+	public function liste_q(){
 		return $this->db->select('*')
 			->from('CommentaireQuebec')
 			->order_by('id', 'desc')
@@ -43,9 +43,64 @@ class Commentaire extends CI_Model {
 			->result();
 	}	
 	
-	public function liste_B(){
-		return $this->db->query("SELECT * FROM Commentaireblog")->result();
+	public function liste_b(){
+		return $this->db->query("SELECT * FROM ArticleBlog")->result();
 	}	
+	
+	public function dix_q(){
+		$this->db->query('SELECT * FROM `CommentaireQuebec` ORDER BY `CommentaireQuebec`.`date` DESC LIMIT 5');
+	}
+	
+	public function dix_b(){
+		$this->db->query('SELECT * FROM `Commentaireblog` ORDER BY `Commentaireblog`.`date` DESC LIMIT 5');
+	}
+	public function q_id($id){
+		return $this->db->select('*')
+		->from('CommentaireQuebec')
+		->where(array('idArticle' => $id))
+		->order_by('id', 'desc')
+		->get()
+		->result();
+	}
+	public function b_id($id){
+		return $this->db->select('*')
+		->from('Commentaireblog')
+		->where(array('idArticle' => $id))
+		->order_by('id', 'desc')
+		->get()
+		->result();
+	}
+	
+	public function count_q($id){
+		$nb=$this->db->select('*')
+		->from('CommentaireQuebec')
+		->where(array('idArticle' => $id))
+		->order_by('id', 'desc')
+		->get()
+		->num_rows();
+		if ($nb>1){
+			$nb=$nb." Commentaires";
+		}
+		else{
+			$nb=$nb." Commentaire";
+		}
+		return $nb;
+	}
+	public function count_b($id){
+		$nb=$this->db->select('*')
+		->from('Commentaireblog')
+		->where(array('idArticle' => $id))
+		->order_by('id', 'desc')
+		->get()
+		->num_rows();
+		if ($nb>1){
+			$nb=$nb." Commentaires";
+		}
+		else{
+			$nb=$nb." Commentaire";
+		}
+		return $nb;
+	}
 	//public $id, $idArticle, $date,$txt;
 	
 	/*public static function setFromId( $id,$data ) {                                                                                                  

@@ -30,6 +30,9 @@ class Blog extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->helper('assets');
 		if ($page==''){
+			//$this->load->model('Article','art');
+			//$res=Article::get_blog($page);
+			//echo $res->titre;
 			/*
 			$this->load->model('Commentaire','com');
 			$res=$this->com->liste_Q();
@@ -39,10 +42,16 @@ class Blog extends CI_Controller {
 			//$resultat=$this->com->ajouter_commentaireQ('maxime','wsh','1');*/
 			//var_dump($resultat);
 			
-			$this->load->view('blogView');
+			//$this->load->view('blogView');
 		}
 		else {
-		$this->load->view('articleB/'.$page);
+			$article=$this->classArticle->get_blog($page);
+			$list=$this->classCommentaire->b_id($article->idArticle);
+			$nb=$this->classCommentaire->count_b($article->idArticle);
+			$data['article'] =$article;
+			$data['list_com']=$list;
+			$data['nbre_com']=$nb;
+			$this->load->view('articleB/'.$page,$data);
 		}
 	}
 }

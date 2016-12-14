@@ -1,0 +1,115 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html> <!-- J'ai modfier afficherListe pour tester aec album-->
+	<head>
+		<meta charset="utf-8"/>
+	<link href="<?php echo BASE_URL.'/css/bootstrap.css';?>" rel="stylesheet" />
+		<title><?php echo $this->album->titre;?></title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="page-header">
+				<ul class="nav nav-pills pull-right">
+					<li> <a href="<?php echo BASE_URL.'/Inscription';?>">Inscription </a></li>
+					<li> <a href="<?php echo BASE_URL.'/Album';?>">Liste des albums</a></li>
+					<li> <a href="<?php echo BASE_URL.'/Artiste';?>">Liste des artistes</a></li>
+					<?php
+					 if(isset($_SESSION['pseudo'])){
+					?>
+					<li> <a href="<?php echo BASE_URL.'/Utilisateur';?>">Membres</a></li>
+					<?php } ?>
+					<li> <a href="<?php echo BASE_URL.'/About';?>">A propos</a></li>
+					<li> <?php 
+								if(isset($_SESSION['pseudo'])){
+											echo "Bienvenue ".$_SESSION['pseudo']."(".$_SESSION['level'].")";?>
+				<form method="post" action="<?php echo BASE_URL.'/Deconnexion';?>">
+   <input type='submit' class="btn btn-info" value='Se déconnecter'/></form>
+								<?php }
+								else { ?>
+											<li> <a href="<?php echo BASE_URL.'/Connexion';?>">Connexion</a></li> <?php
+								}
+								?>
+						</li>
+				</ul>
+				<h1><?php if(($this->album->pochette)!=null){?>
+						<img class="img-rounded" width="60" height="60" src="<?php echo $this->album->pochette;?>">
+								<?php }; ?>
+			<?php echo $this->album->titre;?> </h1>
+			</div>
+			<p class="lead">
+		</p>
+		<table class="table table-stripped">
+			<tr><td>Titre:</td><td><?php echo $this->album->titre;?></td></tr>
+			<tr><td>Artiste:</td><td><a href="<?php echo BASE_URL.'/Artiste/afficher/'.$this->artiste->pseudoArtiste ?>"><?php echo $this->artiste->pseudoArtiste;?></a></td></tr>
+			<tr><td>Genre:</td><td><?php echo $this->album->genre;?></td></tr>
+			<tr><td>Note:</td><td>
+    <?php for($i=1;$i<=5;$i=$i+1){
+     if ($i<=$this->artiste->noteGeneral){
+      echo "<font size="."'5'"." style="."'color:orange'".">★</font>";
+     }
+     else{
+      echo "<font size="."'5'"." style="."'color:cyan'".">★</font>";
+     }
+    }
+    ?>
+    <?php echo $this->artiste->noteGeneral;?></td></tr>
+   <tr><td>Date de Sortie:</td><td><?php echo $this->album->dateSortie;?></td></tr>
+  </table>
+  
+	<table>
+		<tr>
+			<th>Déjà écouté cet album ?   </th>
+			<td>
+				<div class="rating">
+				<a href="<?php echo BASE_URL.'/Album/'.($this->album->titre).'/note/5';?>">★</a>
+				<a href="<?php echo BASE_URL.'/Album/'.($this->album->titre).'/note/4';?>">★</a>
+				<a href="<?php echo BASE_URL.'/Album/'.($this->album->titre).'/note/3';?>">★</a>
+				<a href="<?php echo BASE_URL.'/Album/'.($this->album->titre).'/note/2';?>">★</a>
+				<a href="<?php echo BASE_URL.'/Album/'.($this->album->titre).'/note/1';?>">★</a>
+				</div>
+			</td>
+		</tr>
+	</table>
+  
+  <br><br>
+		<form action="<?php echo BASE_URL.'/Album/afficher/'.($this->album->titre);?>" method="post">
+      <label for="message">Message :</label>
+      <textarea cols="50" rows="5" name="commentaire" id="commentaire" style="margin: 0px 0px 10px; width: 925px; height: 100px;" ></textarea>
+      <br>
+      <input class="btn btn-info" type="submit" name="envoyer" value="Envoyer"/>
+      <?php AlbumController::commenter();?>
+    </form>
+			<table class="table table-stripped">
+				<tbody>
+					<?php if (isset($_SESSION['pseudo'])){
+					$listCom = Commentaire::getList();
+					foreach(array_reverse($listCom) as $commentaire) : ?>
+					<?php if ($commentaire->album==$this->album->idAlbum){ ?>
+					<tr>
+						<td><?php echo "<p class="."'commEcrit'".">".($commentaire->texte)."</p>"."<li id="."'commEcrit'".">Ecrit par ".($commentaire->pseudo)." 
+					le ".($commentaire->dateCom)."</li>";?></td>
+						<?php if ($_SESSION['level']=='admin'){ ?>
+						<td><a href='<?php echo BASE_URL."/Commentaire/supCom/".$commentaire->idCommentaire;?>' 
+												class="btn"><i class="icon icon-remove"></i></a></td>
+		<?php } ?>
+					</tr>				
+					<?php }
+					endforeach; }
+					else {
+echo "<h4> Vous devez être connecté pour consuler les albums (Redirection) </h4>";
+	header('Refresh: 2;/public/Connexion');
+							}?>
+				</tbody>
+			</table>
+			<footer>
+				<hr>
+				<div class="text-center">
+					<a href="<?php echo BASE_URL;?>">page d'accueil</a>
+				</div>
+			</footer>
+		</div>
+	
+	</body>
+</html>

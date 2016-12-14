@@ -1,0 +1,92 @@
+<?php
+session_start();
+extract($_POST);
+	if(isset($accepter)){
+		Utilisateur::valideUser($accepter);
+	}
+?>
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8"/>
+	<link href="<?php echo BASE_URL.'/css/bootstrap.css';?>" rel="stylesheet" />
+
+		<title>Membres</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="page-header">
+				<ul class="nav nav-pills pull-right">
+					<li> <a href="<?php echo BASE_URL.'/Inscription';?>">Inscription </a></li>
+					<li> <a href="<?php echo BASE_URL.'/Album';?>">Liste des albums</a></li>
+					<li> <a href="<?php echo BASE_URL.'/Artiste';?>">Liste des artistes</a></li>
+					<?php
+					 if(isset($_SESSION['pseudo'])){
+					?>
+					<li> <a href="<?php echo BASE_URL.'/Utilisateur';?>">Membres</a></li>
+					<?php } ?>
+					<li> <a href="<?php echo BASE_URL.'/About';?>">A propos</a></li>
+					<li> <?php 
+								if(isset($_SESSION['pseudo'])){
+										echo "Bienvenue ".$_SESSION['pseudo']."(".$_SESSION['level'].")";?>
+				<form method="post"  action="<?php echo BASE_URL.'/Deconnexion';?>">
+   <input type='submit' class="btn btn-info" value='Se déconnecter'/></form>
+								<?php }
+								else { ?>
+											<li> <a href="<?php echo BASE_URL.'/Connexion';?>">Connexion</a></li> <?php
+								}
+								?>
+						</li>
+				</ul>
+				<h3 class = "muted">Listes des membres</h3>
+			</div>
+			<table class="table table-stripped">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Pseudo</th><th>E-mail</th><th> Voir Plus</th><?php  if (isset($_SESSION['pseudo']) && $_SESSION['level']=='admin'){ echo "<th>Supprimer</th><th>Valider</th>"; }?> 
+					</tr>
+				</thead>
+				<tbody>
+						<?php foreach($this->list as $user) : ?>
+					<tr>
+						<td  class="cadre"<?php if ($user->valide==1){
+						echo "bgcolor='green'";
+						}
+						else{
+						echo "bgcolor='red'";
+						}
+						?>><i class ="icon icon-user"></i></td>
+						<td>
+							<?php echo $user->pseudo;
+									if($user->pseudo==$_SESSION['pseudo']){
+									echo "  <i class='icon icon-hand-left'></i>";
+									}
+							?>
+						</td>
+						<td><?php echo $user->email;?>
+						</td>
+						<td><a href='<?php echo BASE_URL."/Utilisateur/afficher/".$user->pseudo;?>' 
+								class="btn btn-info"><i class="icon icon-search"><i></a></td>
+						
+				<?php  if (isset($_SESSION['pseudo']) && $_SESSION['level']=='admin'){ ?>
+						<td>
+						<a href='<?php echo BASE_URL."/Utilisateur/supUser/".$user->pseudo;?>' 
+							 class="btn btn-danger"><i class="icon icon-remove"></i></a></td>
+						<td>
+		<?php if($user->valide==false){ ?>
+							<a href='<?php echo BASE_URL."/Utilisateur/valideUser/".$user->pseudo;?>' 
+								 class="btn btn-success"><i class="icon icon-ok"></i></a></td>  <?php } ?>
+					</tr>
+					<?php } endforeach; 
+?>
+				</tbody>
+			</table>
+			<footer>
+				<hr>
+				<div class="text-center">
+					<a href="<?php echo BASE_URL;?>">page d'accueil</a>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
