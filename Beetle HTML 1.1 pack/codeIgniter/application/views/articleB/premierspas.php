@@ -79,7 +79,7 @@
 						<a href="#">First</a>, <a href="#">Step</a> -
 						<time datetime="2013-11-09">8 décembre 2016</time>
 					</h5>
-					<h1><?php echo $article->titre ?>Mes premiers pas</h1>
+					<h1><?php echo $article->titre ?> Mes premiers pas</h1>
 					
 	<?php echo $article->contenu;?>
 				</article>
@@ -156,17 +156,20 @@
 			<div class="comment-section">
 				<h3 id="comments"><?php echo $nbre_com;?></h3>
 				<ul class="comment-list plain">
-					<?php foreach ($list_com as $com){
-					?><li class="comment">
+					<?php
+					
+					foreach ( $list_com as $com ) {
+						?><li class="comment">
 						<div class="single-comment">
 							<div class="comment-author">
-								<img src="<?php echo img_url('avatar.png')?>" class="avatar" alt=""> <cite><a
-									href="#"><?php echo $com->pseudo;?></a></cite> <span class="says">a dit :</span>
+								<img src="<?php echo img_url('avatar.png')?>" class="avatar"
+									alt=""> <cite><a href="#"><?php echo $com->pseudo;?></a></cite>
+								<span class="says">a dit :</span>
 							</div>
 							<!-- comment-author -->
 							<div class="comment-meta">
 								<time datetime="2013-03-23 19:58"><?php echo $com->date;?></time>
-								 <a href="#" class="reply">Reply</a>
+								<a href="#post-comment" class="reply">Reply</a>
 							</div>
 							<!-- comment-meta -->
 							<p><?php echo $com->txt?></p>
@@ -175,27 +178,27 @@
 					<?php }?>
 				</ul>
 			</div>
-			<!-- comment-section -->
+		
 			<div id="post-comment" class="clear-after">
 				<h3 id="reply-title">Leave a Reply</h3>
 				<p class="comment-note">Your email address will not be published.</p>
-				<form class="comment-form">
-					<span class="pre-input"><i class="icon icon-user"></i></span> <input
-						class="name plain buffer" type="text" placeholder="Name"> <span
-						class="pre-input"><i class="icon icon-email"></i></span> <input
-						class="email plain buffer" type="email" placeholder="Email"> <span
-						class="pre-input"><i class="icon icon-globe"></i></span> <input
-						class="email plain buffer" type="text" placeholder="Website">
+				
+				<?php echo form_open(base_url()."blog/article/".$article->titre,true)?>
+				
+				
+					<span class="pre-input"></span> <input name="nom"
+						class="name plain buffer" type="text" placeholder="Nom">
 					<textarea class="plain buffer"
-						placeholder="Don't forget that kindness is all!"></textarea>
+						placeholder="Votre commentaire" name="txt"></textarea>
 					<input class="plain button red" type="submit"
 						value="Submit Comment">
-				</form>
+				<?php echo form_close()?>
+				
 			</div>
-			<!-- post-comment -->
+		<!-- post-comment -->
 
-		</div>
-		<!-- row-content -->
+	</div>
+	<!-- row-content -->
 	</div>
 	<!-- row --> </main>
 	<!-- main -->
