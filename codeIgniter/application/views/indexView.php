@@ -19,16 +19,16 @@
 		<link rel="apple-touch-icon" href="<?php echo img_url('briefcase.png');?>">
 		<link rel="apple-touch-icon" sizes="76x76"  href="<?php echo img_url('briefcase.png');?>">
 		<link rel="apple-touch-icon" sizes="120x120" href="<?php echo img_url('briefcase.png');?>">
-		<link rel="apple-touch-icon" sizes="152x152" href="<?php echo img_url('briefcase.png');?>">	
+		<link rel="apple-touch-icon" sizes="152x152" href="<?php echo img_url('briefcase.png');?>">
 	</head>
 
 	<body class="single single-post">
 	<?php include('menu.php');?>
 		<main role="main">
 			<div id="intro-wrap">
-				<div id="intro" class="preload" data-autoplay="5000" data-navigation="true" data-pagination="true" data-transition="fade">					
-					<div class="intro-item" style="background-color: #65C2E1;">		
-						<div class="intro-mockup-wrapper">		
+				<div id="intro" class="preload" data-autoplay="5000" data-navigation="true" data-pagination="true" data-transition="fade">
+					<div class="intro-item" style="background-color: #65C2E1;">
+						<div class="intro-mockup-wrapper">
 							<div class="caption-mockup caption-right column six last-special">
 								<h2>Présentation</h2>
 								<p>Vous voulez en savoir un peu plus sur moi?</p>
@@ -36,31 +36,31 @@
 							</div><!-- caption -->
 							<div class="intro-mockup intro-left column six">
 								<?php echo img('boston.png');?>
-							</div><!-- intro-mockup -->							
+							</div><!-- intro-mockup -->
 						</div><!-- intro-mockup-wrapper -->
-					</div>					
+					</div>
 					<div class="intro-item" style="background-color: #f5be55;r">
-						<div class="intro-mockup-wrapper">						
+						<div class="intro-mockup-wrapper">
 							<div class="caption-mockup">
 								<h2>CV</h2>
 								<p>Tous mes atouts regroupés dans un seul document!</p>
 								<a class="button white transparent" href="<?php echo doc_url('CV_faivre_m.pdf');?>" target="_blank">Télécharger</a>
-							</div><!-- caption -->											
+							</div><!-- caption -->
 							<div class="intro-mockup">
 								<?php echo img('cv.png');?>
-							</div><!-- intro-mockup -->	
-						</div><!-- intro-mockup-wrapper -->										
+							</div><!-- intro-mockup -->
+						</div><!-- intro-mockup-wrapper -->
 					</div>
 					<div class="intro-item" style="background-color: #6b3f4f;">
 						<div class="intro-mockup-wrapper">
 							<div class="caption-mockup caption-left column six">
 								<h2>Blog</h2>
 								<p>Mes articles exposant mon point de vue à propos de tous et n'importe quoi (surtout n'importe quoi..).
-								<a class="button white transparent" href="list_article.html">J'ai soif de lecture!</a>
-							</div><!-- caption -->												
+								<a class="button white transparent" href="<?php echo base_url().'blog/'?>">J'ai soif de lecture!</a>
+							</div><!-- caption -->
 							<div class="intro-mockup intro-right column six last">
 								<?php echo img('Blog.png');?>
-							</div><!-- intro-mockup -->	
+							</div><!-- intro-mockup -->
 						</div><!-- intro-mockup-wrapper -->
 					</div>
 
@@ -76,7 +76,7 @@
 				<section class="row section call-to-action">
 					<div class="row-content buffer even">
 						<p> Jeune étudiant en D.U.T. informatique,<br>
-							on m'appelle souvent "Maxime" dans le milieu (bon..peut être parce que c'est mon prénom?) 
+							on m'appelle souvent "Maxime" dans le milieu (bon..peut être parce que c'est mon prénom?)
 							et j'ai actuellement 19 années à mon compteur. </p>
 						<p>
 							Soif d'apprendre, je suis quelqu'un de passionné et j'aime m'investir dans mes projets.
@@ -108,7 +108,7 @@
 								<div class="chart-title">Programmation Java/Php</div>
 							</div><!-- chart-content -->
 						</div><!-- chart -->
-					</div>	
+					</div>
 				</section>
 				<section class="row section">
 					<div class="row-content buffer even clear-after">
@@ -116,7 +116,7 @@
 							<h4>Mes formations</h4>
 							<p>Encore jeune, je suis encore dans les études. <br> Dans quelques années, je me vois ingénieur informatique (BAC+5). </p>
 							<a class="button transparent aqua" href ="https://www.linkedin.com/in/maxime-faivre-340a75105?trk=nav_responsive_tab_profile" target="_blank">Voir mon profil LinkedIn</a>
-						</div><!-- timeline-label -->		
+						</div><!-- timeline-label -->
 						<div class="timeline column six last">
 							<div class="year">
 								<time datetime="2017">2017</time>
@@ -129,7 +129,7 @@
 										<p>Septembre 2016 – Mai 2017 <br> Gatineau(QC), Canada</p>
 										<p>Echange universitaire avec l'UPEC</p>
 									</div><!-- experience-info -->
-								</div><!-- experience -->				
+								</div><!-- experience -->
 							</div><!-- year -->
 							<div class="year">
 								<time datetime="2016">2016</time>
@@ -142,8 +142,8 @@
 										<p>Septembre 2015 – Juin 2016 <br>Sénart(77), France</p>
 										<p> Groupe internationnal</p>
 									</div><!-- experience-info -->
-								</div><!-- experience -->				
-							</div><!-- year -->			
+								</div><!-- experience -->
+							</div><!-- year -->
 							<div class="year">
 								<time datetime="2015">2015</time>
 								<div class="experience">
@@ -154,12 +154,12 @@
 										<div class="role">Baccalauréat Scientifique (option I.S.N)</div>
 										<p>Septembre 2014 – Juin 2015 <br>Bondoufle(91), France</p>
 									</div><!-- experience-info -->
-								</div><!-- experience -->		
-								</div><!-- year -->		
+								</div><!-- experience -->
+								</div><!-- year -->
 						</div><!-- timeline -->
-					</div>	
+					</div>
 				</section>
-				
+
 				<section class="row section">
 					<div class="row-content buffer even clear-after">
 						<div class="column four centertxt">
@@ -172,8 +172,8 @@
 								 <div class="lasuite"> <p> ...Comme quoi?...</p> </div>
     		<div class="demasquer">
 					<ul>
-						
-				
+
+
 										<li> Snake en C</li>
 										<li> Jeux de Go en Java</li>
 										<li> Portfolio en HTML/CSS</li>
@@ -184,9 +184,9 @@
     </div>
 								</div>
 								</div>
-							</div><!-- count-item -->	
+							</div><!-- count-item -->
 						</div>
-						
+
 						<div class="column four centertxt ">
 							<div class="count-item">
 								<div class="small-icon red"><i class="fa fa-code"></i></div>
@@ -197,8 +197,8 @@
 								 <div class="lasuite"> <p> ...Les quels?...</p> </div>
     		<div class="demasquer">
 					<ul>
-						
-				
+
+
 										<li> C</li>
 										<li> Java</li>
 										<li> HTML/CSS</li>
@@ -227,11 +227,11 @@
 								</div>
 						</div>
 						</div>
-					</div>	
-				</section>	
+					</div>
+				</section>
 
 				<section class="row section text-light" style="background-color:#4fcead">
-					<div class="row-content buffer even clear-after">	
+					<div class="row-content buffer even clear-after">
 						<div class="column six">
 							<h2>Mon expérience Québec</h2>
 							<p>Durant mon séjour au Canada, j'ai fait un WordPress pour raconter mon voyage.<br>
@@ -247,8 +247,8 @@
 								</figure>
 							</div>
 						</div>
-					</div>	
-				</section>	
+					</div>
+				</section>
 		</main><!-- main -->
 		<footer role="contentinfo">
 			<div class="row">
@@ -272,11 +272,11 @@
 								<li><a href="#">June 2014</a></li>
 								<li><a href="#">July 2014</a></li>
 							</ul>
-						</div>								
+						</div>
 						<div class="widget column three">
 							<h4>Widget</h4>
 							<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-						</div>				
+						</div>
 						<div class="widget meta-social column three">
 							<h4>Je suis aussi sur les réseaux sociaux :</h4>
 							<ul class="inline meta-social">
@@ -285,13 +285,13 @@
 									<li><a href="https://www.linkedin.com/in/maxime-faivre-340a75105?trk=nav_responsive_tab_profile" target="_blank"class="linkedin-share border-box"><i class="fa fa-linkedin fa-lg"></i></a></li>
 									<li><a href="https://www.instagram.com/maximef2/" target="_blank"class="instagram-share border-box"><i class="fa fa-instagram fa-lg"></i></a></li>
 								</ul>
-						</div>														
-					</section><!-- top-footer -->		
-				</div><!-- row-content -->	
-			</div><!-- row -->	
+						</div>
+					</section><!-- top-footer -->
+				</div><!-- row-content -->
+			</div><!-- row -->
 		</footer>
 		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>		
+		<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 		<script src="<?php echo js_url('plugins');?>"></script>
 		<script src="<?php echo js_url('beetle');?>"></script>
 

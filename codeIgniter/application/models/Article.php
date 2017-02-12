@@ -33,7 +33,7 @@ class Article extends CI_Model {
 	}
 
 	public function countQ(){
-		return (int) $this->db->count_all_results($tableQ);
+		return (int) $this->db->count_all_results('ArticleQuebec');
 	}
 
 	public function countB(){
@@ -45,7 +45,7 @@ class Article extends CI_Model {
 	}
 
 	public function liste_q(){
-		return $this->db->query("SELECT * FROM `ArticleQuebec` ORDER BY `ArticleBlog`.`idArticle` DESC")->result();
+		return $this->db->query("SELECT * FROM `ArticleQuebec` ORDER BY `ArticleQuebec`.`idArticle` DESC")->result();
 	}
 
 	public function dix_q(){
@@ -58,8 +58,8 @@ class Article extends CI_Model {
 	public function get_blog($id){
 		return $this->db->select('*')->from('ArticleBlog')->where(array('idArticle' => $id))->get()->row();
 	}
-	public function get_quebec($titre){
-		return $this->db->select('*')->from($tableQ)->where(array('titre' => $titre))->get()->row();
+	public function get_quebec($id){
+		return $this->db->select('*')->from("ArticleQuebec")->where(array('idArticle' => $id))->get()->row();
 	}
 }
 ?>

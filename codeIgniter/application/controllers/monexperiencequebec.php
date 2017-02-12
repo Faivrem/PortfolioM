@@ -30,7 +30,26 @@ class monexperiencequebec extends CI_Controller {
 	$this->load->view('blogQView',$data);
 	}
 	else {
-	$this->load->view('articleQ/'.$page);
+	$article = $this->classArticle->get_quebec ( $page );
+
+	$txt = $this->input->post ( 'txt' );
+	$nom = $this->input->post ( 'nom' );
+
+	$id = $article->idArticle;
+	if (isset ( $txt ) && isset ($nom)) {
+		$this->classCommentaire->ajouter_commentaireQ ( $nom, $txt, $id );
+	}
+
+	$list = $this->classCommentaire->q_id ( $article->idArticle );
+	$nb = $this->classCommentaire->count_q ( $article->idArticle );
+	$nbre_article=$this->classArticle->countQ();
+	$data ['article'] = $article;
+	$data ['list_com'] = $list;
+	$data ['nbre_com'] = $nb;
+	$data['nbre_article']=$nbre_article;
+
+	$this->load->view('ArticleQuebec',$data);
+
 	}
 	}
 
