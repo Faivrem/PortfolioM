@@ -30,6 +30,14 @@ if ( ! function_exists('img_url'))
 		return base_url() . 'assets/img/' . $nom;
 	}
 }
+if ( ! function_exists('img_galerie'))
+{
+	function img_galerie($nom)
+	{
+		return base_url() . 'assets/img/galerie/' . $nom;
+	}
+}
+
 
 if ( ! function_exists('img'))
 {
@@ -61,6 +69,5 @@ if ( ! function_exists('lien_article'))
 		return '<a href="' . base_url() . 'blog/view/' . $nom. '" />';
 	}
 }
-
 
 ?>

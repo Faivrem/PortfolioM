@@ -43,7 +43,7 @@
 		<div id="intro" class="preload darken" data-autoplay="5000"
 			data-navigation="true" data-pagination="true" data-transition="fade">
 			<div class="intro-item"
-				style="background-image: url(<?echo $article->img ?>);">
+				style="background-image: url(<?php echo img_url($article->img)?>);">
 				<div class="photocaption">
 
 					<h4>
@@ -106,58 +106,29 @@
 			</div>
 
 			<div class="related clear-after">
-				<h4>Article aléatoires :</h4>
-				<div class="item">
-					<figure>
-						<img src="http://placehold.it/600x600/ddd/fff&text=Beetle%20image"
-							alt="">
-					</figure>
-					<a class="overlay" href="#">
-						<div class="overlay-content">
-							<div class="post-type">
-								<i class="icon icon-search"></i>
-							</div>
-							<h2>Spicemode</h2>
-							<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt
-								ut labore et dolore magna aliqua.</p>
-						</div> <!-- overlay-content -->
-					</a>
-					<!-- overlay -->
-				</div>
-				<div class="item">
-					<figure>
-						<img src="http://placehold.it/600x600/ddd/fff&text=Beetle%20image"
-							alt="">
-					</figure>
-					<a class="overlay" href="#">
-						<div class="overlay-content">
-							<div class="post-type">
-								<i class="icon icon-search"></i>
-							</div>
-							<h2>In the end</h2>
-							<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt
-								ut labore et dolore magna aliqua.</p>
-						</div> <!-- overlay-content -->
-					</a>
-					<!-- overlay -->
-				</div>
+				<h4>Articles aléatoires :</h4>
+
+				<?php
+				foreach ($alea as $tr) { ?>
+
 				<div class="item last">
 					<figure>
-						<img src="http://placehold.it/600x600/ddd/fff&text=Beetle%20image"
+						<img src="<?php echo img_url($article->img)?>"
 							alt="">
 					</figure>
-					<a class="overlay" href="#">
+					<a class="overlay" href="<?php echo base_url().'blog/view/'.$tr->idArticle?>">
 						<div class="overlay-content">
 							<div class="post-type">
 								<i class="icon icon-search"></i>
 							</div>
-							<h2>Moove</h2>
-							<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt
-								ut labore et dolore magna aliqua.</p>
+							<h2><?php echo $tr->titre ?></h2>
+							<p><?php echo $tr->summary ?></p>
 						</div> <!-- overlay-content -->
 					</a>
 					<!-- overlay -->
 				</div>
+
+				<?php } ?>
 			</div>
 
 			<div class="comment-section">

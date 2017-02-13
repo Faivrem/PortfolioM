@@ -48,9 +48,11 @@ class Blog extends CI_Controller {
 			$list = $this->classCommentaire->b_id ( $article->idArticle );
 			$nb = $this->classCommentaire->count_b ( $article->idArticle );
 			$nbre_article=$this->classArticle->countB();
+			$alea=$this->classArticle->alea_b();
 			$data ['article'] = $article;
 			$data ['list_com'] = $list;
 			$data ['nbre_com'] = $nb;
+			$data['alea']=$alea;
 			$data['nbre_article']=$nbre_article;
 			$this->load->view ('ArticleBlog', $data );
 		}

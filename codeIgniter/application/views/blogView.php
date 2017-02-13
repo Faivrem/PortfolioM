@@ -42,7 +42,7 @@
 								<h5>Earl Nightingale</h5></p>
 						</div><!-- caption -->
 						<div class="photocaption">
-							<h4>Des articles  par moi, parfois pour vous et parfois pour moi, au moins une par mois.</h4>
+							<h4>Des articles  par moi, parfois pour vous et parfois pour moi,peut être au moins une par mois.</h4>
 						</div><!-- photocaption -->
 					</div><!-- intro -->
 				</div><!-- intro -->
@@ -53,9 +53,9 @@
 				<div class="grid-items preload">
 
 					<?php foreach ($liste_article as $article ) { ?>
-						<article class="item column six">
+						<article class="item column three">
 							<?php echo lien_article($article->idArticle)?>
-								<figure><img src="<?php echo $article->img?>" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
+								<figure><img src="<?php echo img_url($article->img)?>" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
 								<div class="blog-excerpt">
 									<div class="blog-excerpt-inner">
 										<h5 class="meta-post"><?php echo $article->titre?></h5>

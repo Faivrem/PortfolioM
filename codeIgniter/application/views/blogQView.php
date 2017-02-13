@@ -50,7 +50,7 @@
 				<div class="grid-items preload">
 
 		<?php foreach ($liste_article as $article ) { ?>
-			<article class="item column six">
+			<article class="item column five">
 				<?php echo lien_blog($article->idArticle)?>
 					<figure><img src="<?php echo img_url($article->img)?>" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
 					<div class="blog-excerpt">

@@ -49,17 +49,24 @@ class Article extends CI_Model {
 	}
 
 	public function dix_q(){
-		return $this->db->query('SELECT * FROM `ArticleQuebec` ORDER BY `ArticleQuebec`.`date` DESC LIMIT 5');
+		return $this->db->query('SELECT * FROM `ArticleQuebec` ORDER BY `ArticleQuebec`.`date` DESC LIMIT 5')->result();;
 	}
 
 	public function dix_b(){
-		return $this->db->query('SELECT * FROM `ArticleBlog` ORDER BY `ArticleBlog`.`date` DESC LIMIT 5');
+		return $this->db->query('SELECT * FROM `ArticleBlog` ORDER BY `ArticleBlog`.`date` DESC LIMIT 5')->result();;
 	}
 	public function get_blog($id){
 		return $this->db->select('*')->from('ArticleBlog')->where(array('idArticle' => $id))->get()->row();
 	}
 	public function get_quebec($id){
 		return $this->db->select('*')->from("ArticleQuebec")->where(array('idArticle' => $id))->get()->row();
+	}
+
+	public function alea_q(){
+		return $this->db->query('SELECT * FROM ArticleQuebec ORDER BY RAND() LIMIT 3')->result();
+	}
+	public function alea_b(){
+		return $this->db->query('SELECT * FROM ArticleBlog ORDER BY RAND() LIMIT 3')->result();
 	}
 }
 ?>

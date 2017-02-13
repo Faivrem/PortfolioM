@@ -35,13 +35,14 @@
 											<li><a href="#">Sub Sub Menu 01</a></li>
 											<li><a href="#">Sub Sub Menu 02</a></li>
 											<li><a href="#">Sub Sub Menu 03</a></li>
-										</ul>										
+										</ul>
 									</li>
-								</ul>								
+								</ul>
 							</li>
+							<li class="menu-item"><a href="<?php echo base_url()?>galerie">Galerie</a></li>
 							<li class="menu-item"><a href="<?php echo base_url()?>contact">Contact</a></li>
 						</ul>
 					</nav>
-				</div><!-- row-content -->	
-			</div><!-- row -->	
+				</div><!-- row-content -->
+			</div><!-- row -->
 		</header>

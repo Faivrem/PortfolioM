@@ -64,15 +64,15 @@
 					<li id="prev-items" class="post-nav">
 						<a href="
 						<?php if($article->idArticle>1){
-						echo base_url().'blog/view/'.($article->idArticle-1);
+						echo base_url().'monexperiencequebec/blog/'.($article->idArticle-1);
 						}?>
 						"><i
 							class="fa fa-chevron-left"></i><span class="label">Prev</span></a></li>
-					<li id="all-items" class="post-nav"><a href="<?php echo base_url().'monexperiencequebec/blog'?>"><i
+					<li id="all-items" class="post-nav"><a href="<?php echo base_url().'monexperiencequebec/blog/'?>"><i
 							class="icon icon-images"></i></a></li>
 					<li id="next-items" class="post-nav"><a href="
 					<?php if($article->idArticle!=$nbre_article){
-					echo base_url().'blog/view/'.($article->idArticle+1);
+					echo base_url().'monexperiencequebec/blog/'.($article->idArticle+1);
 					}?>
 					"><span
 							class="label">Next</span><i class="fa fa-chevron-right"></i></a></li>
