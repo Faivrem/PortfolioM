@@ -1,0 +1,190 @@
+{# src/OC/PlatformBundle/Resources/views/Default/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+<body class="single single-post">
+
+<main role="main">
+  <div id="intro-wrap">
+    <div id="intro" class="preload" data-autoplay="5000" data-navigation="true" data-pagination="true" data-transition="fade">
+      <div class="intro-item" style="background-color: rgba(0,18,41,0.89);">
+        <div class="intro-mockup-wrapper">
+          <div class="caption-mockup caption-right column six last-special">
+            <h2>Présentation</h2>
+            <p>Vous voulez en savoir un peu plus sur moi?</p>
+            <a class="button white transparent" id="aboutme" href="#main">Qui suis-je?</a>
+            <a class="button white transparent" id="mecontacter" href="mailto:maxime@faivrem.fr">Me contacter</a>
+          </div><!-- caption -->
+          <div class="intro-mockup intro-left column six">
+            <img src="{{ asset('img/boston.png') }}" alt="" />
+          </div><!-- intro-mockup -->
+        </div><!-- intro-mockup-wrapper -->
+      </div>
+      <div class="intro-item" style="background-color: #545762">
+        <div class="intro-mockup-wrapper">
+          <div class="caption-mockup">
+            <h2>CV</h2>
+            <p>Tous mes atouts et mon parcours regroupés dans un seul document.</p>
+            <a class="button white transparent" href="{{ asset('doc/CV.pdf')}}" target="_blank">Télécharger</a>
+          </div><!-- caption -->
+          <div class="intro-mockup">
+            <img src="{{ asset('img/cv.png')}}" alt="" />
+          </div><!-- intro-mockup -->
+        </div><!-- intro-mockup-wrapper -->
+      </div>
+      <div class="intro-item" style="background-color: #47567D;">
+        <div class="intro-mockup-wrapper">
+          <div class="caption-mockup caption-left column six">
+            <h2>Réalisations</h2>
+            <p>Un ingénieur doit savoir mettre en oeuvre aussi bien ses compétences techniques que humaines au seins d'un projet.<br>
+              <a class="button white transparent" href="#">Projets techniques</a></li><br>
+              <a class="button white transparent" href="#">Projets humains</a></li><br>
+              <a class="button white transparent" href="#">Compétences</a></li><br>
+
+          </div><!-- caption -->
+          <div class="intro-mockup intro-right column six last">
+            <img src="{{ asset('img/idea.png')}}" alt="" />
+          </div><!-- intro-mockup -->
+        </div><!-- intro-mockup-wrapper -->
+      </div>
+      <div class="intro-item" style="background-color: #7d586d;">
+        <div class="intro-mockup-wrapper">
+          <div class="caption-mockup caption-left column six">
+            <h2>Galerie</h2>
+            <p>..<br>
+              <a class="button white transparent" href="#">Voir les photos</a></li><br>
+          </div><!-- caption -->
+          <div class="intro-mockup intro-right column six last">
+            <img src="{{ asset('img/gallery.png')}}" alt="" />
+          </div><!-- intro-mockup -->
+        </div><!-- intro-mockup-wrapper -->
+      </div>
+    </div><!-- intro -->
+  </div><!-- intro-wrap -->
+
+  <div id="main">
+
+    <section class="row section call-to-action">
+      <div class="row-content buffer even">
+      <div class="section-title"><h3>À PROPOS DE MOI</h3></div>
+        Amoureux des données et issu d'une full jointure entre deux datacenters,<br>
+        je m'appelle Maxime Faivre et j'ai actuellement 21 ans au compteur. (1 row selected)</p>
+        <p>
+          Orange est mon entreprise d'accueil (grosse erreur de leur part de m'avoir pris en apprentissage pendant 3 ans, cela dit en passant)
+          et m'envoie en formation à l'ESIEA afin d'obtenir mon diplôme d'ingénieur :-).<br>
+
+          <br>
+
+        </p>
+      </div>
+    </section>
+
+
+
+    <section class="row section">
+      <div class="row-content buffer even clear-after">
+
+        <div class="section-title"><h3>Parcours</h3>
+          <p>Par ailleurs, je suis actuellement entrain de suivre une <b>formation d'ingénieur par apprentissage. (CFA-ITE)</b> <br>
+          </p>
+
+          <a class="button transparent aqua" href ="https://www.linkedin.com/in/maxime-faivre-340a75105?trk=nav_responsive_tab_profile" target="_blank">Voir mon profil  <i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+        </div>
+        <div class="timeline column six ">
+          <h4>Formation</h4>
+          <div class="year">
+            <time datetime="2018">2018</time>
+            <div class="experience">
+              <span class="circle"></span>
+              <div class="experience-img"><div>
+                  <img src="{{ asset('img/esiea.jpg') }}" alt=""/>
+                </div></div>
+              <div class="experience-info clear-after">
+                <h5>ESIEA</h5>
+                <div class="role">Formation d'ingénieur en apprentissage</div>
+                <p>Septembre 2017 – Juillet 2020 <br> Paris 5 / Ivry(94), France </p>
+                <p>Spécialisation Systèmes d'information et Big Data</p>
+              </div><!-- experience-info -->
+            </div><!-- experience -->
+          </div><!-- year -->
+
+          <div class="year">
+            <time datetime="2017">2017</time>
+            <div class="experience">
+              <span class="circle"></span>
+              <div class="experience-img"><div>
+                  <img src="{{ asset('img/uqo.png') }}" alt=""/>
+                </div></div>
+              <div class="experience-info clear-after">
+                <h5>UQO</h5>
+                <div class="role">Baccalauréat en Informatique</div>
+                <p>Septembre 2016 – Mai 2017 <br> Gatineau(QC), Canada</p>
+                <p>Echange universitaire avec l'UPEC</p>
+              </div><!-- experience-info -->
+            </div><!-- experience -->
+          </div><!-- year -->
+
+            <div class="year">
+              <time datetime="2016">2016</time>
+              <div class="experience">
+                <span class="circle"></span>
+                <div class="experience-img"><div>
+                    <img src="{{ asset('img/upec.png') }}" alt="" />
+                  </div></div>
+                <div class="experience-info clear-after">
+                  <h5>UPEC</h5>
+                  <div class="role">1ère année de D.U.T Informatique</div>
+                  <p>Septembre 2015 – Juin 2016 <br> Sénart(77), France</p>
+                  <p>Groupe internationnal</p>
+                </div><!-- experience-info -->
+              </div><!-- experience -->
+            </div><!-- year -->
+
+          <div class="year">
+            <time datetime="2015">2015</time>
+          </div><!-- year -->
+
+         </div><!-- timeline -->
+
+        <div class="timeline column six last">
+          <h4>Expérience professionnelle</h4>
+          <div class="year">
+            <time datetime="2018">2018</time>
+            <div class="experience">
+              <span class="circle"></span>
+              <div class="experience-img"><div>
+                  <img src="{{ asset('img/orange.png') }}" alt=""/>
+                </div></div>
+              <div class="experience-info clear-after">
+                <h5>Orange</h5>
+                <div class="role">Apprenti datamining</div>
+                <p>Septembre 2017 – Juillet 2020 <br> Paris 15, France </p>
+                <p>Processus d'amélioration de la qualité de service d'Orange</p>
+              </div><!-- experience-info -->
+            </div><!-- experience -->
+         <div class="experience">
+              <span class="circle"></span>
+              <div class="experience-img"><div>
+                  <img src="{{ asset('img/arianespace.png') }}" alt=""/>
+                </div></div>
+              <div class="experience-info clear-after">
+                <h5>Arianespace</h5>
+                <div class="role">Stagiaire développeur Symfony</div>
+                <p>Mai 2017 - Juillet 2017<br> Evry(91), France </p>
+                <p>Portage et évolutions d'applications en Symfony v3</p>
+              </div><!-- experience-info -->
+            </div><!-- experience -->
+          </div><!-- year -->
+          <time datetime="2017">2017</time>
+        </div><!-- timeline -->
+
+        </div>
+      <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+      <span class="sr-only">
+    </section>
+
+</main><!-- main -->
+
+{% endblock %}
